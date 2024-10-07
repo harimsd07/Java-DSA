@@ -1,17 +1,17 @@
 import java.util.*;
 class BinarySearch{
-    public static int binarySearch(int arr[],int s,int first,int last){
+    public static int binarySearch(int arr[],int target,int first,int last){
         while(first<=last){
-            int mid = (first+last)/2;
+            int mid = first + (last-first)/2;
 
-            if(arr[mid] == s){
+            if(arr[mid] == target){
                 return mid;
             }
-            else if(mid > s){
-                return binarySearch(arr, s, first, mid-1);
+            else if(mid > target){
+                return binarySearch(arr, target, first, mid-1);
             }
-            else if(mid<s){
-                return binarySearch(arr, s, mid+1, last);
+            else if(mid<target){
+                return binarySearch(arr, target, mid+1, last);
             }
         }
         return -1;

@@ -34,7 +34,7 @@ class BubbleSort{
                 System.out.print(num +" ");
                 
             }
-            System.out.println();
+            System.out.println();   
         }
         System.out.println("Element after sorting:");
         for(int num:arr){
